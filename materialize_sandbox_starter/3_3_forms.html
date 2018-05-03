@@ -195,21 +195,45 @@
       </div>
 
       <!-- MULTIPLE SELECT -->
-      <div>
-        <select>
-
+      <div class="input-field">
+        <select multiple>
+          <option value="" disabled selected>Option 1</option>
+          <option value="1">Option 1</option>
+          <option value="2">Option 2</option>
+          <option value="3">Option 3</option>
         </select>
-        <label>Multiple Select</label>
+        <label>Select List</label>
       </div>
 
       <!-- RADIO BUTTONS -->
-
+      <p>
+        <input type="radio" name="gender" id="male">
+        <label for="male">Male</label>
+      </p>
+      <p>
+        <input type="radio" name="gender" id="female">
+        <label for="female">Female</label>
+      </p>
       <br>
       <br>
 
       <!-- CHECKBOXES -->
-
-
+      <p>
+        <input type="checkbox" name="tech" id="html">
+        <label for="html">HTML</label>
+      </p>
+      <p>
+        <input type="checkbox" name="tech" id="css" checked>
+        <label for="css">CSS</label>
+      </p>
+      <p>
+        <input type="checkbox" class="filled-in" name="tech" id="js">
+        <label for="js">JS</label>
+      </p>
+      <p>
+        <input disabled type="checkbox" name="tech" id="php">
+        <label for="php">PHP</label>
+      </p>
       <br>
       <br>
       <div>
