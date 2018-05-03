@@ -170,30 +170,30 @@
     <div class="chips-input"></div>
 
     <!-- PAGINATION -->
-    <ul>
-      <li>
+    <ul class="pagination">
+      <li class="disabled">
         <a href="#!">
-          <i></i>
+          <i class="material-icons">chevron_left</i>
         </a>
       </li>
-      <li>
+      <li class="waves-effect active">
         <a href="#!">1</a>
       </li>
-      <li>
+      <li class="waves-effect">
         <a href="#!">2</a>
       </li>
-      <li>
+      <li class="waves-effect">
         <a href="#!">3</a>
       </li>
-      <li>
+      <li class="waves-effect">
         <a href="#!">4</a>
       </li>
-      <li>
+      <li class="waves-effect">
         <a href="#!">5</a>
       </li>
-      <li>
+      <li class="waves-effect">
         <a href="#!">
-          <i></i>
+          <i class="material-icons">chevron_right</i>
         </a>
       </li>
     </ul>
@@ -220,10 +220,21 @@
       });
 
       // JAVASCRIPT START HERE //
-
-
-
-
+      $('.chips-input').material_chip({
+        placeholder: 'Enter a Tag',
+        secondaryPlaceholder: '+Tag',
+        autocompleteOptions: {
+          data: {
+            'html': null,
+            'css': null,
+            'javascript': null,
+          }
+        }
+      });
+    });
+    //ADD Chip Event
+    $('.chips-input').on('chip.add', function (e, chip) {
+      console.log('You added a chip - ${chip.tag}');
     });
   </script>
 </body>
